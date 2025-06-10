@@ -227,8 +227,8 @@ else:
 # --- Predict button ---
 if st.button("🔍 Predict"):
     if 'model' in locals():
-        prediction = model.predict(input_data)[0]
-        probabilities = model.predict_proba(input_data)[0]
+        prediction = model.predict(input_data.values))[0]
+        probabilities = model.predict_proba(input_data.values))[0]
 
         label_map = {0: "⚠️ Dropout", 1: "🎓 Graduated"}
         result = label_map[prediction]
